@@ -1,5 +1,5 @@
 ---
-title: Xianglous
+title: XIANGLOUS
 layout: default
 ---
 
