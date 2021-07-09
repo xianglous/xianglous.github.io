@@ -17,7 +17,7 @@ $(document).ready(function(){
     let content = $(this).find(".collapsibleContent")[0];
     collapsibleDict[btn.id] = false;
     console.log(btn.id);
-    btn.click(e => {
+    $(btn).click(e => {
       e.preventDefault();
       console.log('clicked');
       if (collapsibleDict[btn.id]) {
