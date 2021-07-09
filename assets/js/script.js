@@ -21,9 +21,9 @@ $(document).ready(function(){
       e.preventDefault();
       console.log('clicked');
       if (collapsibleDict[btn.id]) {
-        content.style.display = "none";
+        $(content).height("0");
       }else {
-        content.style.display = "block";
+        $(content).height("auto");
       }
       collapsibleDict[btn.id] = !collapsibleDict[btn.id];
     });
