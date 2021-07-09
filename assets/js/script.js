@@ -10,7 +10,7 @@ $(document).ready(function(){
       $("#navSidepanel").width("200px");
       $("#sidebarIcon").attr("src", "/assets/static/icon/close-menu.svg");
     }
-    collapseButton = !collapseButton;
+    sidebarCollapsed = !sidebarCollapsed;
   });
   $(".collapsible").each((index, element) => {
     let btn = $(element).children(".collapsibleButton")[0];
