@@ -18,6 +18,7 @@ h1 {
 .contentFrame {
     height: 100%;
     overflow-x: hidden;
+    flex-grow: 1;
     float: left;
 }
 
