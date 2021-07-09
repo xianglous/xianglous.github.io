@@ -3,7 +3,7 @@ html, body {
     height: 100vh;
     width: 100vw;
     margin: 0;
-    display:table;
+    display: flex;
     overflow-x: hidden;
 }
 
@@ -17,7 +17,6 @@ h1 {
 /* Main content div */
 .contentFrame {
     height: 100%;
-    display:table-row;
     overflow-x: hidden;
     float: left;
 }
