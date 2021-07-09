@@ -103,13 +103,8 @@ h1 {
 }
 
 .collapsible .collapsibleButton h2 {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin-top: 0px;
     margin-left: 10px;
-}
-
-.collapsible .collapsibleButton p {
-    margin-left: 20px;
 }
 
 .collapsible .collapsibleButton:hover {
@@ -117,10 +112,15 @@ h1 {
 }
 
 .collapsible .collapsibleContent {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     width: auto;
     height: 0;
     overflow: hidden;
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+}
+
+.collapsible .collapsibleContent p {
+    margin-left: 20px;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
