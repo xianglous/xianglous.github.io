@@ -1,15 +1,36 @@
 ---
-title: XIANGLOUS
+title: XIANGLONG LI
 layout: default
 ---
 
 # {{ page.title }}
+<div id="about" class="collapsible">
+    <button class="collapsibleButton">
+        <h2>About</h2>
+    </button>
+    <div class="collapsibleContent">
+        <p>
+            Hello, this is Xianglong Li.
+        </p>
+    </div>
+</div>
+
+<div id="projects" class="collapsible">
+    <button class="collapsibleButton">
+        <h2>Projects</h2>
+    </button>
+    <div class="collapsibleContent">
+        <p>
+            Projects.
+        </p>
+    </div>
+</div>
 
 <div id="playlists" class="collapsible">
-    <button id="playlistButton" class="collapsibleButton">
+    <button class="collapsibleButton">
         <h2>Playlists</h2>
     </button>
-    <div id="playlistContent" class="collapsibleContent">
+    <div class="collapsibleContent">
         <iframe
                 src="https://open.spotify.com/embed/track/3P3UA61WRQqwCXaoFOTENd" 
                 width="auto" 
@@ -22,12 +43,12 @@ layout: default
 </div>
 
 <div id="contacts" class="collapsible">
-    <button id="contacttButton" class="collapsibleButton">
+    <button class="collapsibleButton">
         <h2>Contact</h2>
     </button>
-    <div id="contactContent" class="collapsibleContent">
+    <div class="collapsibleContent">
         <p>
-            Hello, this is Xianglong Li.
+            email: 
         </p>
     </div>
 </div>
