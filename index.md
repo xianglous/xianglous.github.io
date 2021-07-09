@@ -31,9 +31,9 @@ layout: default
         <h2>Playlists</h2>
     </button>
     <div class="collapsibleContent">
-        <iframe
-                src="https://open.spotify.com/embed/track/3P3UA61WRQqwCXaoFOTENd" 
-                width="auto" 
+        <iframe 
+                src="https://open.spotify.com/embed/playlist/4ieXQqKXgt5zGtdmuvP8oC" 
+                width="100%" 
                 height="380" 
                 frameBorder="0" 
                 allowtransparency="true" 
