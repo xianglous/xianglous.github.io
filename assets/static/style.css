@@ -110,7 +110,7 @@ h1 {
     background-color: grey;
 }
 
-.collapsible .content {
+.collapsible .collapsibleContent {
     margin-left: 30px;
 }
 
