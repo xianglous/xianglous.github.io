@@ -15,17 +15,15 @@ $(document).ready(function(){
   $(".collapsible").each((index, element) => {
     let btn = $(element).children(".collapsibleButton")[0];
     let content = $(element).children(".collapsibleContent")[0];
-    console.log(element.id);
-    console.log(btn.id);
-    collapsibleDict[btn.id] = true;
+    collapsibleDict[index] = true;
     $(btn).click((e) => {
       e.preventDefault();
-      if (collapsibleDict[btn.id]) {
+      if (collapsibleDict[index]) {
         $(content).height("auto");
       }else {
         $(content).height("0");
       }
-      collapsibleDict[btn.id] = !collapsibleDict[btn.id];
+      collapsibleDict[index] = !collapsibleDict[index];
     });
   });
 });
