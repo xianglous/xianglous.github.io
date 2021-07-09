@@ -87,16 +87,6 @@ h1 {
     opacity: 1;
 }
 
-.sectionFrame {
-    width: 100%;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.sectionFrame h2 {
-    margin-top: 0px;
-    margin-left: 10px;
-}
-
 .collapsible {
     background-color: transparent;
     cursor: pointer;
@@ -111,6 +101,12 @@ h1 {
     padding-left: 20px;
     text-align: left;
     font-weight: 10px;
+}
+
+.collapsible .collapsibleButton h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 0px;
+    margin-left: 10px;
 }
 
 .collapsible .collapsibleButton:hover {
