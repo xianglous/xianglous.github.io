@@ -13,8 +13,8 @@ $(document).ready(function(){
     collapseButton = !collapseButton;
   });
   $(".collapsible").each(() => {
-    btn = this.children(".collapsibleButton").get(0);
-    content = this.children(".collapsibleContent").get(0);
+    btn = $(this).children(".collapsibleButton").get(0);
+    content = $(this).children(".collapsibleContent").get(0);
     collapsibleDict[btn.id] = false;
     btn.click(e => {
       e.preventDefault();
