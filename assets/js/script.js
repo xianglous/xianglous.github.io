@@ -13,8 +13,8 @@ $(document).ready(function(){
     collapseButton = !collapseButton;
   });
   $(".collapsible").each((index, element) => {
-    let btn = element.children(".collapsibleButton")[0];
-    let content = element.children(".collapsibleContent")[0];
+    let btn = $(element).children(".collapsibleButton")[0];
+    let content = $(element).children(".collapsibleContent")[0];
     console.log(element.id);
     console.log(btn.id);
     collapsibleDict[btn.id] = true;
