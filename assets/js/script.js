@@ -12,10 +12,10 @@ $(document).ready(function(){
     }
     collapseButton = !collapseButton;
   });
-  $(".collapsible").each(() => {
-    let btn = $(this).children(".collapsibleButton")[0];
-    let content = $(this).children(".collapsibleContent")[0];
-    console.log($(this).attr('id'));
+  $(".collapsible").each((index, element) => {
+    let btn = element.children(".collapsibleButton")[0];
+    let content = element.children(".collapsibleContent")[0];
+    console.log(element.id);
     console.log(btn.id);
     collapsibleDict[btn.id] = true;
     if (collapsibleDict[btn.id]) {
