@@ -13,13 +13,13 @@ $(document).ready(function(){
     collapseButton = !collapseButton;
   });
   $(".collapsible").each(() => {
-    var btn = $(this).find(".collapsibleButton")[0];
-    var content = $(this).find(".collapsibleContent")[0];
+    let btn = $(this).find(".collapsibleButton")[0];
+    let content = $(this).find(".collapsibleContent")[0];
     collapsibleDict[btn.id] = false;
     btn.click(e => {
       e.preventDefault();
+      alert('clicked');
       if (collapsibleDict[btn.id]) {
-        alert('clicked')
         content.style.display = "none";
       }else {
         content.style.display = "block";
