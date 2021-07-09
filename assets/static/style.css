@@ -117,7 +117,8 @@ h1 {
 
 .collapsible .collapsibleContent {
     width: auto;
-    display: none;
+    height: 0;
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
