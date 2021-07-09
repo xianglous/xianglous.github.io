@@ -118,6 +118,7 @@ h1 {
 .collapsible .collapsibleContent {
     width: auto;
     height: 0;
+    overflow: hidden;
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
 }
 
