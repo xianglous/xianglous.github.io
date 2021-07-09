@@ -18,11 +18,14 @@ $(document).ready(function(){
     console.log(element.id);
     console.log(btn.id);
     collapsibleDict[btn.id] = true;
-    if (collapsibleDict[btn.id]) {
-      $(content).height("auto");
-    }else {
-      $(content).height("0");
-    }
-    collapsibleDict[btn.id] = !collapsibleDict[btn.id];
+    $(btn).click((e) => {
+      e.preventDefault();
+      if (collapsibleDict[btn.id]) {
+        $(content).height("auto");
+      }else {
+        $(content).height("0");
+      }
+      collapsibleDict[btn.id] = !collapsibleDict[btn.id];
+    });
   });
 });
