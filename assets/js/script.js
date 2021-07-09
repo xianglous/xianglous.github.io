@@ -17,7 +17,7 @@ $(document).ready(function(){
     let content = $(this).find(".collapsibleContent")[0];
     collapsibleDict[btn.id] = {
       content: content.id,
-      collapsed: true;
+      collapsed: true,
     };
     console.log(btn.id);
   });
