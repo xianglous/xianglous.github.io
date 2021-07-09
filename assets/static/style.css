@@ -16,7 +16,8 @@ h1 {
 /* Main content div */
 .contentFrame {
     height: 100%;
-    width: auto;
+    width: 100%;
+    overflow-x: hidden;
     float: left;
 }
 
@@ -101,15 +102,16 @@ h1 {
     width: 100%;
     height: 40px;
     background-color: white;
-    padding-left: 30px;
 }
 
 .collapsible .collapsibleButton:hover {
-    background-color: grey;
+    background-color: #ddd;
 }
 
 .collapsible .collapsibleButton h2 {
     margin-top: 0px;
+    margin-left: 20px;
+    text-align: left;
 }
 
 .collapsible .collapsibleContent {
