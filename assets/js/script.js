@@ -19,6 +19,7 @@ $(document).ready(function(){
     btn.click(e => {
       e.preventDefault();
       if (collapsibleDict[btn.id]) {
+        alert('clicked')
         content.style.display = "none";
       }else {
         content.style.display = "block";
