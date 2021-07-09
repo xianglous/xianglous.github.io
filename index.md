@@ -7,7 +7,7 @@ layout: default
 
 <div id="playlist" class="sectionFrame">
     <h2>Playlist</h2>
-    <div class="collapsible">
+    <div id="c1" class="collapsible">
         <button id="songButton1" class="collapsibleButton">
             Through the Night
         </button>
@@ -22,7 +22,7 @@ layout: default
             </iframe>
         </div>
     </div>
-    <div class="collapsible">
+    <div id="c2" class="collapsible">
         <button id="songButton2" class="collapsibleButton">
             Blueming
         </button>
