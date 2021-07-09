@@ -5,7 +5,12 @@ layout: default
 
 # {{ page.title }}
 
-## Playlists
-<div id="playlist">
-    <iframe src="https://open.spotify.com/embed/track/3P3UA61WRQqwCXaoFOTENd" width="100%" height="380" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+<div id="playlist" class="sectionFrame">
+    <h2>Playlist</h2>
+    <div class="collapsible">
+        <button id="playlistButton" class="collapsibleButton"></button>
+        <div id="playlistContent" class="collapsibleContent">
+        <iframe src="https://open.spotify.com/embed/track/3P3UA61WRQqwCXaoFOTENd" width="100%" height="380" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        </div>
+    </div>
 </div>
