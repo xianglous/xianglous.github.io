@@ -111,6 +111,7 @@ h1 {
 }
 
 .collapsible .collapsibleContent {
+    display: none;
     margin-left: 30px;
 }
 
