@@ -13,24 +13,14 @@ $(document).ready(function(){
     collapseButton = !collapseButton;
   });
   $(".collapsible").each(() => {
-    let btn = $(this).find(".collapsibleButton")[0];
-    let content = $(this).find(".collapsibleContent")[0];
-    collapsibleDict[btn.id] = {
-      content: content.id,
-      collapsed: true,
-    };
-    console.log(btn.id);
+    let btn = $(this).children(".collapsibleButton")[0];
+    let content = $(this).children(".collapsibleContent")[0];
+    collapsibleDict[btn.id] = true;
+    if (collapsibleDict[btn.id]) {
+      $(content).height("auto");
+    }else {
+      $(content).height("0");
+    }
+    collapsibleDict[btn.id] = !collapsibleDict[btn.id];
   });
-  for (const [btnid, props] of collapsibleDict) {
-    $("#" + btnid).click(e => {
-      e.preventDefault();
-      console.log('clicked');
-      if (props.collapsed) {
-        $("#" + props.contentid).height("auto");
-      }else {
-        $("#" + props.contentid).height("0");
-      }
-      collapsibleDict[btnid].collapsed = !collapsibleDict[btnid].collapsed;
-    });
-  }
 });
