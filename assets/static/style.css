@@ -16,7 +16,7 @@ h1 {
 /* Main content div */
 .contentFrame {
     height: 100%;
-    width: 100%;
+    width: auto;
     overflow-x: hidden;
     float: left;
 }
@@ -115,6 +115,7 @@ h1 {
 }
 
 .collapsible .collapsibleContent {
+    width: auto;
     display: none;
 }
 
