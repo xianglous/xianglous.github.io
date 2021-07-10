@@ -105,6 +105,7 @@ h1 {
 }
 
 .collapsible .collapsibleButton h2 {
+    font-weight: normal;
     margin-top: 0px;
     margin-left: 10px;
 }
