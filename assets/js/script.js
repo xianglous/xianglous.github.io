@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  let sidebarCollapsed = true;
+  let sidebarCollapsed = ($("#navSidepanel").width() === 0);
   let collapsibleDict = []
   $("#sidebarButton").click(e => {
     e.preventDefault();
@@ -15,7 +15,7 @@ $(document).ready(function(){
   $(".collapsible").each((index, element) => {
     let btn = $(element).children(".collapsibleButton")[0];
     let content = $(element).children(".collapsibleContent")[0];
-    collapsibleDict[index] = true;
+    collapsibleDict[index] = ($(content).height() === 0);
     $(btn).click((e) => {
       e.preventDefault();
       if (collapsibleDict[index]) {
