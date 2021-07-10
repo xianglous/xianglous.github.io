@@ -42,7 +42,7 @@ layout: default
     </div>
 </div>
 
-<div id="contacts" class="collapsible">
+<div id="contact" class="collapsible">
     <button class="collapsibleButton">
         <h2>Contact</h2>
     </button>
