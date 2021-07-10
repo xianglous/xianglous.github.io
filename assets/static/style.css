@@ -79,7 +79,7 @@ h1 {
     height: 100%;
     width: 100%;
     margin: 0;
-    opacity: 0.8;
+    opacity: 0.5;
 }
 
 /* Hover highlight the button */
@@ -100,6 +100,8 @@ h1 {
     background-color: white;
     text-align: left;
     font-weight: 10px;
+    border: none;
+    border-top: 1px solid black;
 }
 
 .collapsible .collapsibleButton h2 {
