@@ -116,7 +116,7 @@ h1 {
 .collapsible .collapsibleContent {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     width: auto;
-    height: 0;
+    height: auto;
     overflow: hidden;
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
 }
