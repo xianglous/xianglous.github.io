@@ -1,0 +1,173 @@
+:root {
+    --sidebarWidth: 200px;
+    --sidebarBackgroundColor: rgba(50, 50, 128, 0.7)
+}
+
+/* Set full screen weight and height */
+html {
+    display: flex;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    overflow-x: hidden;
+    display: flex;
+}
+
+iframe {
+    margin-left: 5%;
+    width: 90%;
+}
+
+/* The sidebar menu */
+.sidebar {
+    position: fixed;
+    height: 100%; /* 100% Full-height */
+    width: 0;
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    padding-top: 20px;
+    background-color: var(--sidebarBackgroundColor);
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: width 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+}
+
+/* The sidebar links */
+.sidebar a {
+    width: 100%;
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    display: block;
+    opacity: 0.5;
+}
+  
+/* When you mouse over the navigation links, change their color */
+.sidebar a:hover {
+    opacity: 1;
+}
+
+/* Sidebar button bar */
+.sidebarButtonWrapper {
+    position: fixed;
+    top: 50px;
+    z-index: 1; /* Stay on top */
+    height: 70px;
+    width: 70px;
+    background-color: var(--sidebarBackgroundColor);
+    border-radius: 0px 15px 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* The button used to open/close the sidebar */
+#sidebarButton {
+    width: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    color: black;
+    border: none;
+    background-color: transparent;
+}
+
+/* The icon of the button */
+#sidebarButtonIcon {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    opacity: 0.5;
+}
+
+/* Hover highlight the button */
+#sidebarButtonIcon:hover{
+    opacity: 1;
+}
+
+#mainFrame {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    transition: width 0.5s, left 0.5s;
+}
+
+.headerFrame {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+/* Header */
+.headerFrame h1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 50px;
+    margin-left: 100px;
+    float: left;
+}
+
+/* Main content div */
+.contentFrame {
+    position: relative;
+    height: auto;
+    width: 100%;
+}
+
+.collapsible {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: transparent;
+    width: 100%;
+    height: auto;
+    border: none;
+}
+
+.collapsibleButton {
+    width: 100%;
+    height: min-content;
+    background-color: white;
+    cursor: pointer;
+    text-align: left;
+    font-size: 10px;
+    border: none;
+    border-top: 1px solid black;
+}
+
+.collapsibleButton h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: normal;
+    font-size: 25px;
+    margin: 10px;
+    margin-left: 80px;
+}
+
+.collapsibleButton:hover {
+    background-color: #ddd;
+}
+
+.collapsibleContent {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+}
+
+.collapsibleContent p {
+    margin-left: 90px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-device-width: 450px) {
+    :root {--sidebarWidth: 100%;}
+    .sidebarButtonWrapper {float: none;}
+    .contentFrame {float: none;}
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+} 
