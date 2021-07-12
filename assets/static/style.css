@@ -1,6 +1,7 @@
 :root {
-    --sidebarWidth: 200px;
-    --sidebarBackgroundColor: rgba(50, 50, 128, 0.7);
+    --sidebarWidth: 180px;
+    --backgroundColor: rgba(50, 100, 200, 1);
+    --collapsibleBorderColor: rgba(0, 0, 0, 0.3);
     --contentBackgroundColor: white;
 }
 
@@ -11,6 +12,7 @@ html {
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--backgroundColor);
     width: 100%;
     margin: 0;
     overflow-x: hidden;
@@ -31,7 +33,7 @@ iframe {
     top: 0;
     left: 0;
     padding-top: 20px;
-    background-color: var(--sidebarBackgroundColor);
+    background-color: transparent;
     overflow-x: hidden; /* Disable horizontal scroll */
     transition: width 0.5s; /* 0.5 second transition effect to slide in the sidebar */
 }
@@ -56,11 +58,11 @@ iframe {
 /* Sidebar button bar */
 .sidebarButtonWrapper {
     position: fixed;
-    top: 50px;
+    top: 0px;
     z-index: 200; /* Stay on top */
-    height: 70px;
-    width: 70px;
-    background-color: var(--sidebarBackgroundColor);
+    height: 60px;
+    width: 60px;
+    background-color: var(--backgroundColor);
     border-radius: 0px 15px 15px 0;
     display: flex;
     justify-content: center;
@@ -70,7 +72,6 @@ iframe {
 /* The button used to open/close the sidebar */
 #sidebarButton {
     width: 50px;
-    font-size: 20px;
     cursor: pointer;
     color: black;
     border: none;
@@ -81,7 +82,6 @@ iframe {
 #sidebarButtonIcon {
     height: 100%;
     width: 100%;
-    margin: 0;
     opacity: 0.5;
 }
 
@@ -145,7 +145,7 @@ iframe {
     text-align: left;
     font-size: 10px;
     border: none;
-    border-top: 1px solid black;
+    border-bottom: 2px solid var(--collapsibleBorderColor);
 }
 
 .collapsibleButton h2 {
@@ -156,8 +156,29 @@ iframe {
     margin-left: 80px;
 }
 
+.collapsibleButton h2::after {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    float: right;
+    margin-right: 5%;
+    color: var(--backgroundColor);
+}
+
+.collapsibleButton:hover h2::after {
+    color: white;
+}
+
+.collapsibleButton .expandedHeader::after {
+    content: '-';
+}
+
+.collapsibleButton .collapsedHeader::after {
+    content: '+';
+}
+
 .collapsibleButton:hover {
-    background-color: #ddd;
+    background-color: var(--backgroundColor);
+    color: white;
 }
 
 .collapsibleContent {

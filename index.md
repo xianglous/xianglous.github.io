@@ -5,7 +5,7 @@ layout: default
 <div id="about" class="stickyNode">
     <div class="collapsible">
         <button class="collapsibleButton">
-            <h2>About</h2>
+            <h2 class="expandedHeader">About</h2>
         </button>
     </div>
     <div class="collapsibleContent">
@@ -17,7 +17,7 @@ layout: default
 <div id="projects" class="stickyNode">
     <div class="collapsible">
         <button class="collapsibleButton">
-            <h2>Projects</h2>
+            <h2 class="expandedHeader">Projects</h2>
         </button>
     </div>
     <div class="collapsibleContent">
@@ -29,7 +29,7 @@ layout: default
 <div id="playlists" class="stickyNode">
     <div class="collapsible">
         <button class="collapsibleButton">
-            <h2>Playlists</h2>
+            <h2 class="expandedHeader">Playlists</h2>
         </button>
     </div>
     <div class="collapsibleContent">
@@ -46,7 +46,7 @@ layout: default
 <div id="contact" class="stickyNode">
     <div class="collapsible">
         <button class="collapsibleButton">
-            <h2>Contact</h2>
+            <h2 class="expandedHeader">Contact</h2>
         </button>
     </div>
     <div class="collapsibleContent">

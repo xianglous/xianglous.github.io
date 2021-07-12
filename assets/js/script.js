@@ -1,55 +1,75 @@
 $(document).ready(() => {
-  let sidebarCollapsed = ($("#navSidepanel").width() === 0);
-  let collapsibleDict = [];
+  /* Handle the collapse of the sidebar */
+  let sidebarCollapsed = ($("#navSidepanel").width() === 0); // sidebar collapsed boolean
   $("#sidebarButton").click(e => {
     e.preventDefault();
     if (!sidebarCollapsed) {
-      $("#navSidepanel").width("0");
-      $("#mainFrame").css({"left": 0});
-      $("#mainFrame").width("100%");
-      $("#sidebarButtonIcon").attr("src", "/assets/static/icon/open-menu.svg");
-      $("#sidebarButtonIcon").width("100%");
+      $("#navSidepanel").width("0"); // collapse the sidebar
+      $("#mainFrame").css({"left": 0}); // move the mainFrame to left
+      $("#mainFrame").width("100%"); // expand to fill screen
+      $("#sidebarButtonIcon").attr(
+        "src",
+        "/assets/static/icon/open-menu.svg" // change the icon
+        ); 
+      $("#sidebarButtonIcon").width("100%"); // adjust icon size
     }else {
-      $("#navSidepanel").width("var(--sidebarWidth)");
-      $("#mainFrame").css({"left": "var(--sidebarWidth)"});
+      $("#navSidepanel").width("var(--sidebarWidth)"); // expand the sidebar
+      $("#mainFrame").css({
+        "left": "var(--sidebarWidth)", // move the mainFrame to right
+      }); 
       $("#mainFrame").width(
         "calc(" +
         $("#mainFrame").width() + 
         "px - " + 
         $(":root").css("--sidebarWidth") + 
         ")"
+        ); // calculate the size of the mainFrame and fill it
+      $("#sidebarButtonIcon").attr(
+        "src", 
+        "/assets/static/icon/close-menu.svg" // change the icon
         );
-      $("#sidebarButtonIcon").attr("src", "/assets/static/icon/close-menu.svg");
-      $("#sidebarButtonIcon").width("80%");
+      $("#sidebarButtonIcon").width("80%"); // adjust the icon size
     }
-    sidebarCollapsed = !sidebarCollapsed;
+    sidebarCollapsed = !sidebarCollapsed; // toggle the boolean
   });
 
+  /* Handle the collapse of the collapsibles */
+  let collapsibleDict = []; // the collapse booleans
+  let toggleCollapse = (index, collapse) => {
+    let content = $(".collapsibleContent")[index]; // get the content to collapse/expand
+    let btn = $(".collapsibleButton h2")[index]; // get the button header
+    if (!collapse && collapsibleDict[index]) {
+      $(content).css("margin-top", 0); // show the content
+      $(btn).attr("class", "expandedHeader"); // change the header class to display '+'
+    }
+    if (collapse && !collapsibleDict[index]) {
+      $(content).css("margin-top", -$(content).height()); // hide the content
+      $(btn).attr("class", "collapsedHeader"); // change the header class to display '-'
+    }
+    collapsibleDict[index] = collapse; // toggle the boolean
+  };
+
   $(".stickyNode").each((index, element) => {
-    let btn = $(".collapsibleButton")[index];
-    let content = $(".collapsibleContent")[index];
-    $(element).css({"z-index": 100 - index});
-    collapsibleDict[index] = ($(content).height() === 0);
+    let btn = $(".collapsibleButton")[index]; // get the button
+    let content = $(".collapsibleContent")[index]; // get the content
+    $(element).css({"z-index": 100 - index}); // set the layer
+    collapsibleDict[index] = ($(content).css("margin-top") === 0); // set the initial values of the boolean
     $(btn).click((e) => {
       e.preventDefault();
-      if (collapsibleDict[index]) {
-        $(content).css("margin-top", "0");
-      }else {
-        $(content).css("margin-top", -$(content).height());
-      }
-      collapsibleDict[index] = !collapsibleDict[index];
+      toggleCollapse(index, !collapsibleDict[index]); // toggle the collapsible
     });
   });
+
+  /* Handle the expansion of the collapsibles on clicking the navigation links */
   document.querySelectorAll('a[href^="#"]').forEach((anchor, index) => {
     anchor.addEventListener('click', e => {
         e.preventDefault();
-        let content = document.querySelector(anchor.getAttribute('href'));
+        let content = document.querySelector(anchor.getAttribute('href')); // get the target collapsible
         if (collapsibleDict[index]) {
-          $($(".collapsibleContent")[index]).css("margin-top", "0");
-          collapsibleDict[index] = false;
+          toggleCollapse(index, false); // toggle the collapsible
         }
         content.scrollIntoView({
-            behavior: 'smooth'
+            behavior: 'smooth', // smoothly scroll the the collapsible content
         });
     });
   });
