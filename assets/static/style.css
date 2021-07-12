@@ -1,6 +1,7 @@
 :root {
     --sidebarWidth: 200px;
-    --sidebarBackgroundColor: rgba(50, 50, 128, 0.7)
+    --sidebarBackgroundColor: rgba(50, 50, 128, 0.7);
+    --contentBackgroundColor: white;
 }
 
 /* Set full screen weight and height */
@@ -9,6 +10,7 @@ html {
 }
 
 body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     width: 100%;
     margin: 0;
     overflow-x: hidden;
@@ -25,7 +27,7 @@ iframe {
     position: fixed;
     height: 100%; /* 100% Full-height */
     width: 0;
-    z-index: 1; /* Stay on top */
+    z-index: 200; /* Stay on top */
     top: 0;
     left: 0;
     padding-top: 20px;
@@ -55,7 +57,7 @@ iframe {
 .sidebarButtonWrapper {
     position: fixed;
     top: 50px;
-    z-index: 1; /* Stay on top */
+    z-index: 200; /* Stay on top */
     height: 70px;
     width: 70px;
     background-color: var(--sidebarBackgroundColor);
@@ -96,7 +98,9 @@ iframe {
 }
 
 .headerFrame {
+    background-color: white;
     position: relative;
+    z-index: 150;
     width: 100%;
     height: auto;
     display: flex;
@@ -114,18 +118,22 @@ iframe {
 
 /* Main content div */
 .contentFrame {
-    position: relative;
-    height: auto;
     width: 100%;
+}
+
+.stickyNode {
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
 
 .collapsible {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
+    display: flex;
     background-color: transparent;
     width: 100%;
-    height: auto;
     border: none;
 }
 
@@ -153,10 +161,11 @@ iframe {
 }
 
 .collapsibleContent {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--contentBackgroundColor);
     width: auto;
-    height: auto;
     overflow: hidden;
+    margin-top: 0;
+    transition: margin-top 0.5s;
 }
 
 .collapsibleContent p {
