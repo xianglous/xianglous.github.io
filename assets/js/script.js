@@ -1,11 +1,9 @@
 $(document).ready(() => {
   /* Handle the collapse of the sidebar */
-  let sidebarCollapsed = ($("#navSidepanel").width() === 0); // sidebar collapsed boolean
+  let sidebarCollapsed = ($("#mainFrame").offset().left === 0); // sidebar collapsed boolean
   $("#sidebarButton").click(e => {
     e.preventDefault();
     if (!sidebarCollapsed) {
-      $("#navSidepanel").width("0"); // collapse the sidebar
-      $("#mainFrame").css({"left": 0}); // move the mainFrame to left
       $("#mainFrame").width("100%"); // expand to fill screen
       $("#sidebarButtonIcon").attr(
         "src",
@@ -13,10 +11,6 @@ $(document).ready(() => {
         ); 
       $("#sidebarButtonIcon").width("100%"); // adjust icon size
     }else {
-      $("#navSidepanel").width("var(--sidebarWidth)"); // expand the sidebar
-      $("#mainFrame").css({
-        "left": "var(--sidebarWidth)", // move the mainFrame to right
-      }); 
       $("#mainFrame").width(
         "calc(" +
         $("#mainFrame").width() + 

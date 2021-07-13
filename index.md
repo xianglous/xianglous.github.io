@@ -1,5 +1,6 @@
 ---
 title: XIANGLONG LI
+ChineseTitle: 李翔龙
 layout: default
 ---
 <div id="about" class="stickyNode">
@@ -55,5 +56,5 @@ layout: default
         </p>
     </div>
 </div>
-<div style="height:1000px">
+<div style="height:1000px;background-color:white;">
 </div>
