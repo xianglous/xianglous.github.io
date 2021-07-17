@@ -35,6 +35,7 @@ layout: default
     </div>
     <div class="collapsibleContent">
         <iframe 
+                id="playlist1"
                 src="https://open.spotify.com/embed/playlist/4ieXQqKXgt5zGtdmuvP8oC" 
                 width="100%" 
                 height="380" 

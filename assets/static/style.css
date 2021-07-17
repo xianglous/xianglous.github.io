@@ -6,6 +6,11 @@
     --collapsibleHeaderColor: var(--backgroundColor);
     --contentBackgroundColor: white;
 }
+::-moz-selection, 
+::selection {
+    color: white;
+    background: var(--backgroundColor);
+}
 
 /* html and body */
 html {
@@ -112,7 +117,7 @@ iframe {
     text-align: center;
     display: flex;
     width: 100%;
-    height: 150px;
+    height: 200px;
     background-color: white;
 }
 

@@ -53,7 +53,7 @@ $(document).ready(() => {
       toggleCollapse(index, !collapsibleDict[index]); // toggle the collapsible
     });
   });
-
+  //console.log($('#playlist1').contents().find('.af').css('background-color'));
   /* Handle the expansion of the collapsibles on clicking the navigation links */
   document.querySelectorAll('a[href^="#"]').forEach((anchor, index) => {
     anchor.addEventListener('click', e => {
