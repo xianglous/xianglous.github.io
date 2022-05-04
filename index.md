@@ -22,9 +22,9 @@ layout: default
         </button>
     </div>
     <div class="collapsibleContent">
-        <p>
-            Projects.
-        </p>
+        <div class="collapsible">
+        [ml-replica](https://xianglous.github.io/ml-replica/)
+        </div>
     </div>
 </div>
 <div id="playlists" class="stickyNode">
