@@ -23,7 +23,9 @@ layout: default
     </div>
     <div class="collapsibleContent">
         <div class="collapsible">
-        [ml-replica](https://xianglous.github.io/ml-replica/)
+            <a href="https://xianglous.github.io/ml-replica/">
+                ml-replica
+            </a>
         </div>
     </div>
 </div>
