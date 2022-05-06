@@ -4,16 +4,30 @@ var BeautifulJekyllJS = {
 
   bigImgEl : null,
   numImgs : null,
+  collapsed : false,
 
   init : function() {
     setTimeout(BeautifulJekyllJS.initNavbar, 10);
-
     // Shorten the navbar after scrolling a little bit down
     $(window).scroll(function() {
-        if ($(".navbar").offset().top > 50) {
+        if ($(".navbar").offset().top > 100) {
             $(".navbar").addClass("top-nav-short");
-        } else {
+            $(".nav-item").css({"padding-top": "0rem",
+                                "padding-bottom": "0rem"});
+            $(".header-section").addClass("animate__fadeOutUp");
+            $(".header-section").removeClass("animate__fadeInDown");
+            $(".navbar-brand").css("display", "block");
+            $(".navbar-brand").addClass("animate__fadeInRight");
+            $(".navbar-brand").removeClass("animate__fadeOutRight");
+            collapsed = true;
+        } else if (collapsed) {
             $(".navbar").removeClass("top-nav-short");
+            $(".nav-item").css({"padding-top": "1.25rem",
+                                "padding-bottom": "1.25rem"});
+            $(".header-section").removeClass("animate__fadeOutUp");
+            $(".header-section").addClass("animate__fadeInDown");
+            $(".navbar-brand").removeClass("animate__fadeInRight");
+            $(".navbar-brand").addClass("animate__fadeOutRight");
         }
     });
 

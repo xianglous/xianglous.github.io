@@ -1,9 +1,16 @@
 <nav class="navbar navbar-expand-xl navbar-light fixed-top navbar-custom {% if page.nav-short %}top-nav-short-permanent{% else %}top-nav-regular{% endif %}">
 
   {%- if site.title-img -%}
-    <a class="navbar-brand navbar-brand-logo" href="{{ '' | absolute_url }}"><img alt="{{ site.title }} Logo" src="{{ site.title-img | relative_url}}"/></a>
-  {%- elsif site.title -%}
-    <a class="navbar-brand" href="{{ '' | absolute_url }}">{{ site.title }}</a>
+    <a class="navbar-brand navbar-brand-logo animate__animated" href="{{ '' | absolute_url }}"><img alt="{{ page.title }} Logo" src="{{ site.title-img | relative_url}}"/></a>
+    {%- if page.title and page.chinese-subtitle -%}
+    <span class="navbar-brand animate__animated">{{ page.title }} | <span class="chinese-subtitle" style="text-indent:0;letter-spacing:1rem;font-weight:normal;">{{ page.chinese-subtitle }}</span></span>
+    {%- elsif page.title -%}
+    <span class="navbar-brand animate__animated">{{ page.title }}</span>
+    {%- endif -%}
+  {%- elsif page.title and page.chinese-subtitle -%}
+    <a class="navbar-brand animate__animated" href="{{ '' | absolute_url }}">{{ page.title }} | <span class="chinese-subtitle" style="text-indent:0;letter-spacing:1rem;font-weight:normal;">{{ page.chinese-subtitle }}</span></a>
+  {%- elsif page.title -%}
+    <a class="navbar-brand animate__animated" href="{{ '' | absolute_url }}">{{ page.title }}</a>
   {%- endif -%}
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
