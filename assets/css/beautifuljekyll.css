@@ -13,7 +13,7 @@ html {
 body {
   font-family: 'Lora', 'Times New Roman', serif;
   font-size: 1.125rem;
-  color: {{ site.text-col | default: "#404040" }};
+  color: {{ site.yale-dark-blue | default: "#404040" }};
   position: relative;
   background-color: {{ site.page-col | default: "#FFFFFF" }};
   {% if site.page-img %}
@@ -47,11 +47,11 @@ h1, h2, h3, h4 {
   margin-top: 1.25rem;
 }
 a {
-  color: {{ site.link-col | default: "#008AFF" }};
+  color: {{ site.yale-blue | default: "#008AFF" }};
 }
 a:hover,
 a:focus {
-  color: {{ site.hover-col | default: "#0085A1" }};
+  color: {{ site.yale-light-blue | default: "#0085A1" }};
 }
 blockquote {
   color: #808080;
@@ -81,14 +81,14 @@ hr.small {
 }
 
 ::-moz-selection {
-  color: #fff;
+  color: {{ site.umich-yellow }};
   text-shadow: none;
-  background-color: {{ site.hover-col | default: "#0085A1" }};
+  background-color: {{ site.umich-blue | default: "#0085A1" }};
 }
 ::selection {
-  color: #fff;
+  color: {{ site.umich-yellow }};
   text-shadow: none;
-  background-color: {{ site.hover-col | default: "#0085A1" }};
+  background-color: {{ site.umich-blue | default: "#0085A1" }};
 }
 img::selection {
   color: #fff;
@@ -123,7 +123,8 @@ img {
 /* --- Navbar --- */
 
 .navbar-custom {
-  background-color: {{ site.navbar-col | default: "#EAEAEA" }};
+  /* background-color: {{ site.navbar-col | default: "#EAEAEA" }}; */
+  background-image: linear-gradient(to right, {{ site.yale-light-blue | default: "#EAEAEA" }}, {{ site.yale-dark-blue | default: "#EAEAEA" }});
   border-bottom: 1px solid {{ site.navbar-border-col | default: "#DDDDDD" }};
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   {% if site.navbar-img %}
@@ -191,7 +192,7 @@ img {
 .navbar-custom .navbar-brand,
 .navbar-custom .navbar-nav .nav-link {
   font-weight: 800;
-  color: {{ site.navbar-text-col | default: "#404040" }};
+  color: {{ site.navbar-col | default: "#404040" }};
 }
 
 .navbar-toggler {
@@ -262,7 +263,7 @@ img {
   text-decoration: none !important;
   border-width: 0 1px 1px 1px;
   font-weight: normal;
-  color: {{ site.navbar-text-col | default: "#404040" }};
+  color: {{ site.yale-dark-blue | default: "#404040" }};
 }
 
 @media (min-width: 1200px) {
@@ -305,7 +306,12 @@ img {
 .navbar-custom .navbar-nav .nav-link:focus,
 .navbar-custom .navbar-nav .dropdown-menu .dropdown-item:hover,
 .navbar-custom .navbar-nav .dropdown-menu .dropdown-item:focus {
-  color: {{ site.hover-col | default: "#0085A1" }};
+  color: {{ site.yale-light-blue | default: "#0085A1" }};
+}
+
+.navbar-custom .navbar-brand:hover,
+.navbar-custom .navbar-brand:focus {
+  color: {{ site.yale-dark-blue | default: "#0085A1" }};
 }
 
 .navbar-custom .avatar-container {
@@ -342,6 +348,12 @@ img {
   {% endunless %}
   display: block;
 }
+/* .navbar-custom .avatar-container .avatar-img-border:hover {
+  background-color: {{ site.umich-blue }};
+} */
+.navbar-custom .avatar-container .avatar-img:hover {
+  opacity: 0.7;
+}
 
 .navbar-custom.top-nav-expanded .avatar-container {
   display: none;
@@ -374,7 +386,8 @@ footer {
   border-top: 1px #EAEAEA solid;
   margin-top: 3.125rem;
   font-size: 0.875rem;
-  background-color: {{ site.footer-col | default: "#EAEAEA" }};
+  /* background-color: {{ site.footer-col | default: "#EAEAEA" }}; */
+  background-image: linear-gradient(to right, {{ site.yale-light-blue | default: "#EAEAEA" }}, {{ site.yale-dark-blue | default: "#EAEAEA" }});
   {% if site.footer-img %}
     background-image: url({{ site.footer-img | relative_url }});
     background-attachment: fixed;
@@ -382,16 +395,20 @@ footer {
 }
 
 footer p.text-muted {
-  color: {{ site.footer-text-col | default: "#777777" }} !important;
+  color: {{ site.navbar-col | default: "#777777" }} !important;
 }
 
 footer a {
-  color: {{ site.footer-link-col | default: "#404040" }};
+  color: {{ site.yale-light-blue | default: "#404040" }};
+}
+
+footer .social-link {
+  color: {{ site.yale-dark-blue | default: "#404040" }};
 }
 
 footer a:hover,
 footer a:focus {
-  color: {{ site.footer-hover-col | default: "#0085A1" }};
+  color: {{ site.yale-light-blue | default: "#0085A1" }};
 }
 
 footer .list-inline {
@@ -451,13 +468,13 @@ footer .footer-custom-content {
 .post-preview a {
   text-decoration: none;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: {{ site.text-col | default: "#404040" }};
+  color: {{ site.yale-blue | default: "#404040" }};
 }
 
 .post-preview a:focus,
 .post-preview a:hover {
   text-decoration: none;
-  color: {{ site.hover-col | default: "#0085A1" }};
+  color: {{ site.yale-light-blue | default: "#0085A1" }};
 }
 
 .post-preview .post-title {
@@ -558,12 +575,12 @@ footer .footer-custom-content {
 }
 
 .blog-tags span {
-  color: {{ site.text-col | default: "#404040" }};
+  color: {{ site.yale-dark-blue | default: "#404040" }};
   opacity: 0.8;
 }
 
 .blog-tags a {
-  color: {{ site.text-col | default: "#404040" }};
+  color: {{ site.yale-blue | default: "#404040" }};
   text-decoration: none;
   padding: 0 0.3125rem;
   opacity: 0.8;
@@ -573,8 +590,8 @@ footer .footer-custom-content {
 
 .blog-tags a:hover {
   opacity: 1;
-  color: {{ site.text-col | default: "#404040" }};
-  border-color: {{ site.text-col | default: "#404040" }};
+  color: {{ site.yale-dark-blue | default: "#404040" }};
+  border-color: {{ site.yale-dark-blue | default: "#404040" }};
 }
 
 .post-preview .blog-tags {
@@ -592,6 +609,11 @@ footer .footer-custom-content {
 
 .tag-btn {
   margin: 0.3125rem;
+  background-color: {{ site.yale-dark-blue }};
+}
+
+.tag-btn:hover {
+  background-color: {{ site.yale-light-blue }};
 }
 
 #full-tags-list {
@@ -675,6 +697,11 @@ nav.top-nav-short-permanent ~ header > .intro-header.big-img {
 }
 .intro-header .post-heading .post-subheading {
   margin-bottom: 1.25rem;
+}
+.chinese-subheading {
+  font-family: "Siyuansongti";
+  text-indent: 100px;
+  letter-spacing: 100px;
 }
 .intro-header.big-img .page-heading .page-subheading,
 .intro-header.big-img .post-heading .post-subheading {
@@ -1005,7 +1032,7 @@ pre {
   display: none;
   z-index: 999999;
   position: fixed;
-  background: rgba(0,0,0,0.9);
+  background: rgba(0,0,0,0.5);
   left: 0;
   right: 0;
   top: 0;

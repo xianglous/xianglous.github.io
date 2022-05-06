@@ -52,7 +52,7 @@ social-network-links:
 #  xing: yourname
 #  stackoverflow: "3943160/daattali"
 #  snapchat: deanat78
-  instagram: xianglous
+#  instagram: xianglous
 #  spotify: yourname
 #  telephone: +14159998888
 #  steam: deanat78
@@ -75,9 +75,9 @@ rss-description: Website of XIANGLOUS
 
 # Select which social network share links to show in posts
 share-links-active:
-  instagram: true
-  github: true
-  linkedin: true
+  instagram: false
+  github: false
+  linkedin: false
   vk: false
 
 # How to display the link to your website in the footer
@@ -94,7 +94,7 @@ feed_show_excerpt: true
 feed_show_tags: true
 
 # Add a search button to the navbar
-post_search: true
+post_search: false
 
 # The keywords to associate with your website, for SEO purposes
 #keywords: "my,list,of,keywords"
@@ -114,6 +114,11 @@ footer-col: "#EAEAEA"
 footer-text-col: "#777777"
 footer-link-col: "#404040"
 footer-hover-col: "#0085A1"
+yale-light-blue: "#63AAFF"
+yale-blue: "#286DC0"
+yale-dark-blue: "#00356B"
+umich-blue: "#00274C"
+umich-yellow: "#FFCB05"
 
 # Alternatively, the navbar, footer, and page background can be set to an image
 # instead of colour
