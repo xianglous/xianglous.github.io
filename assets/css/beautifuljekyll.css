@@ -61,10 +61,12 @@ blockquote p:first-child {
   margin-top: 0;
 }
 hr.small {
-  max-width: 6.25rem;
+  max-width: 30vw;
   margin: 1rem auto;
-  border-width: 0.25rem;
-  border-color: inherit;
+  /* border-width: 0.25rem; */
+  /* border-color: inherit; */
+  height: 0.25rem;
+  background-image: linear-gradient(to right, {{ site.yale-light-blue | default: "#EAEAEA" }}, {{ site.yale-dark-blue | default: "#EAEAEA" }});
   border-radius: 0.1875rem;
 }
 
@@ -700,8 +702,8 @@ nav.top-nav-short-permanent ~ header > .intro-header.big-img {
 }
 .chinese-subheading {
   font-family: "Siyuansongti";
-  text-indent: 100px;
-  letter-spacing: 100px;
+  text-indent: 10vw;
+  letter-spacing: 10vw;
 }
 .intro-header.big-img .page-heading .page-subheading,
 .intro-header.big-img .post-heading .post-subheading {
