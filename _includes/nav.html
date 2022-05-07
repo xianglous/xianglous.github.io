@@ -3,9 +3,9 @@
   {%- if site.title-img -%}
     <a class="navbar-brand navbar-brand-logo animate__animated" href="{{ '' | absolute_url }}"><img alt="{{ page.title }} Logo" src="{{ site.title-img | relative_url}}"/></a>
     {%- if page.title and page.chinese-subtitle -%}
-    <span class="navbar-brand animate__animated">{{ page.title }} | <span class="chinese-subtitle" style="text-indent:0;letter-spacing:1rem;font-weight:normal;">{{ page.chinese-subtitle }}</span></span>
+    <button id="scroller" class="navbar-brand animate__animated" onclick="scrollTop">{{ page.title }} | <span class="chinese-subtitle" style="text-indent:0;letter-spacing:1rem;font-weight:normal;">{{ page.chinese-subtitle }}</span></button>
     {%- elsif page.title -%}
-    <span class="navbar-brand animate__animated">{{ page.title }}</span>
+    <button id="scroller" class="navbar-brand animate__animated" onclick="scrollTop">{{ page.title }}</button>
     {%- endif -%}
   {%- elsif page.title and page.chinese-subtitle -%}
     <a class="navbar-brand animate__animated" href="{{ '' | absolute_url }}">{{ page.title }} | <span class="chinese-subtitle" style="text-indent:0;letter-spacing:1rem;font-weight:normal;">{{ page.chinese-subtitle }}</span></a>

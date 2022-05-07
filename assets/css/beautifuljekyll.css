@@ -151,6 +151,9 @@ img {
   padding-bottom: 0.625rem;
   font-size: 1.125rem;
   animation-duration: 0.75s; 
+  background: none;
+  border: none;
+  outline: none;
   display: none;
 }
 .navbar-custom .navbar-brand-logo {
@@ -1015,6 +1018,11 @@ pre {
 
 .blog-post img {
   max-width: 100%;
+}
+
+.blog-post h2 {
+  font-weight: bold;
+  color : {{ site.yale-blue }};
 }
 
 .blog-post .caption {

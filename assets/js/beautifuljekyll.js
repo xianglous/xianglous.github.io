@@ -4,13 +4,13 @@ var BeautifulJekyllJS = {
 
   bigImgEl : null,
   numImgs : null,
-  collapsed : false,
 
   init : function() {
     setTimeout(BeautifulJekyllJS.initNavbar, 10);
     // Shorten the navbar after scrolling a little bit down
+    var collapsed = false;
     $(window).scroll(function() {
-        if ($(".navbar").offset().top > 100) {
+        if ($(".navbar").offset().top > $(".header-section").height()) {
             $(".navbar").addClass("top-nav-short");
             $(".nav-item").css({"padding-top": "0rem",
                                 "padding-bottom": "0rem"});

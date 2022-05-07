@@ -1,5 +1,6 @@
 ---
 layout: post
+title: ML Replica
 subtitle: Replication of basic & advanced ML models.
 gh-repo: xianglous/ml-replica
 gh-badge: [star, fork, follow]
