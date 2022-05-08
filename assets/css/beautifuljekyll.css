@@ -849,7 +849,7 @@ nav.top-nav-short-permanent ~ header > .intro-header.big-img {
   padding: 0.625rem 0.3125rem;
   background-color: #FFF;
   border-radius: 0;
-  color: {{ site.text-col | default: "#404040" }};
+  color: {{ site.yale-dark-blue | default: "#404040" }};
 }
 @media (min-width: 768px) {
   .pagination .page-item .page-link {
@@ -859,8 +859,8 @@ nav.top-nav-short-permanent ~ header > .intro-header.big-img {
 .pagination .page-item .page-link:hover,
 .pagination .page-item .page-link:focus {
   color: #FFF;
-  border: 1px solid {{ site.hover-col | default: "#0085A1" }};
-  background-color: {{ site.hover-col | default: "#0085A1" }};
+  border: 1px solid {{ site.yale-blue | default: "#0085A1" }};
+  background-color: {{ site.yale-blue | default: "#0085A1" }};
 }
 
 /* --- Tables --- */
@@ -1020,7 +1020,11 @@ pre {
   max-width: 100%;
 }
 
-.blog-post h2 {
+.blog-post h2,
+.blog-post h3,
+.blog-post h4,
+.blog-post h5,
+.blog-post h6 {
   font-weight: bold;
   color : {{ site.yale-blue }};
 }
