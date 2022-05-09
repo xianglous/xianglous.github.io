@@ -14,11 +14,11 @@ author: Xianglong Li
 # --- List of links in the navigation bar --- #
 
 navbar-links:
+  Home: "/"
   About Me: "aboutme"
   Projects:
-    - ml_replica: "https://xianglous.github.io/ml-replica"
+    - ml-replica: "https://xianglous.github.io/ml-replica"
     - Sirious: "https://github.com/xianglous/Sirious"
-  Author's home: "/"
 
 # --- Logo --- #
 
