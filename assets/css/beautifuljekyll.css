@@ -65,7 +65,7 @@ hr.small {
   margin: 1rem auto;
   /* border-width: 0.25rem; */
   /* border-color: inherit; */
-  height: 0.25rem;
+  height: 1px;
   background-image: linear-gradient(to right, {{ site.yale-light-blue | default: "#EAEAEA" }}, {{ site.yale-dark-blue | default: "#EAEAEA" }});
   border-radius: 0.1875rem;
 }
@@ -472,7 +472,8 @@ footer .footer-custom-content {
 
 .post-preview {
   padding: 1.25rem 0;
-  border-bottom: 1px solid #eee;
+  border-bottom: 2px solid {{ site.yale-dark-blue }};
+  border-radius: 0.6rem;
   overflow: hidden;
 }
 
